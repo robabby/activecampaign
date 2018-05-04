@@ -40,5 +40,12 @@
 
   &:hover {
     cursor: pointer;
+    background-color: darken($formSubmitBackgroundColor, 2%)
+  }
+  &:active {
+    background-color: darken($formSubmitBackgroundColor, 5%)
+  }
+  &:disabled {
+    background-color: $isCompleteBlue;
   }
 }

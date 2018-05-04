@@ -1,0 +1,40 @@
+<div class="donate-box__tooltip">
+  <span class="donate-box__tooltip-text">${{remainingAmount}} still needed to fund this project</span>
+</div>
+<div class="donate-box__outer">
+  <div class="donate-box__progress">
+    <div class="donate-box__progress-bar" style="width: {{campaignPercent}}%">
+    </div>
+  </div>
+  <div class="donate-box__content">
+    <h2 class="donate-box__title">Only four days left to fund this project</h2>
+    <p class="donate-box__text">
+      Join the <span class="donate-box__total-donors">{{totalDonors}}</span> other donors who have already supported this project.
+    </p>
+    <div class="donate-box__form">
+      <div class="donate-box__donation-amount">
+        <span class="donate-box__input-mask">$</span>
+        {{input
+          class="donate-box__input"
+          placehoder="0"
+          enter="addDonation"
+          value=donation
+          onChange=(action (mut donation))
+        }}
+      </div>
+      <button
+        type="submit"
+        class="donate-box__submit"
+        {{action "addDonation" donation}}
+        disabled={{isComplete}}
+      >
+        {{buttonText}}
+      </button>
+    </div>
+    {{#if errorMessage}}
+      <div class="donate-box__error-text">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
+</div>

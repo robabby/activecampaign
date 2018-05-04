@@ -1,10 +1,12 @@
 // Colors
 $primaryGreen: #19CCA3;
+$primaryBlue: #E3EBFC;
 
 $backgroundColor: #FAFBFF;
-$tooltipBackgroundColor: #E3EBFC;
+$tooltipBackgroundColor: $primaryBlue;
 $progressBackgroundColor: #B6F2E4;
 $progressBarColor: $primaryGreen;
 $bodyTextColor: #4E5468;
 $formSubmitBackgroundColor: $primaryGreen;
 $formMaskColor: #9298AD;
+$isCompleteBlue: darken($primaryBlue, 25%);
