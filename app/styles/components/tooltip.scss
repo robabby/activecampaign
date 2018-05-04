@@ -1,0 +1,22 @@
+.donate-box__tooltip {
+  position: relative;
+  background-color: $tooltipBackgroundColor;
+  padding: 1rem;
+  border-radius: 7px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 7%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+
+    border-top: 10px solid $tooltipBackgroundColor;
+  }
+}
+.donate-box__tooltip-text {
+  color: #356AE6;
+}

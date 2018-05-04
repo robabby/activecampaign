@@ -1,0 +1,44 @@
+.donate-box__form {
+  display: flex;
+  flex-direction: row;
+}
+.donate-box__donation-amount {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+}
+.donate-box__input {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  padding:.5rem .5rem .35rem 2rem;
+  border:1px solid #CED3E0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  border-radius: 5px 0 0 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15);
+}
+.donate-box__input-mask {
+  position: absolute;
+  top: .55rem;
+  left: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  color:$formMaskColor;
+  z-index: 1;
+}
+.donate-box__submit {
+  background-color: $formSubmitBackgroundColor;
+  border: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
