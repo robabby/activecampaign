@@ -7,9 +7,6 @@ export default Service.extend({
   totalDonations: 0,
   totalDonors: 0,
   errorMessage: '',
-  buttonText: computed('remainingAmount', function() {
-    return this.get('isComplete') ? 'All Done' : 'Give Now';
-  }),
   isComplete: computed('remainingAmount', function() {
     return this.get('remainingAmount') === 0 ? true : false;
   }),

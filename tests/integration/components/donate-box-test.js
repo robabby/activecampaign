@@ -12,15 +12,8 @@ module('Integration | Component | donate-box', function(hooks) {
 
     await render(hbs`{{donate-box}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    let selector = this.$(".donate-box");
 
-    // Template block usage:
-    await render(hbs`
-      {{#donate-box}}
-        template block text
-      {{/donate-box}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(selector.length, 1);
   });
 });
