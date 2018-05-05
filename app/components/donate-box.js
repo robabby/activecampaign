@@ -20,7 +20,6 @@ export default Component.extend({
   buttonText: computed('campaignService.remainingAmount', function() {
     return this.get('campaignService.isComplete') ? 'All Done' : 'Give Now';
   }),
-
   didRender() {
     this.$('.donate-box__input').focus();
   },
