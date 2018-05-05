@@ -29,7 +29,9 @@ export default Service.extend({
   addDonation(donation) {
     let newDonation = parseInt(donation);
 
-    if (newDonation === 0) {
+    if (get(this, 'isComplete')) {
+      set(this, 'errorMessage', 'This campaign has already met it\'s goal!');
+    } else if (newDonation === 0) {
       set(this, 'errorMessage', 'You need to enter an amount!');
     } else if (newDonation % 5 === 0) {
       let totalDonations = get(this, 'totalDonations');
