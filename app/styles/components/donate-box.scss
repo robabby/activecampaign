@@ -15,7 +15,7 @@
 .donate-box__title {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: $Poppins;
   font-weight: bold;
 }
 .donate-box__text {
@@ -24,5 +24,5 @@
 }
 .donate-box__total-donors {
   color:#000;
-  font-family: 'Poppins', sans-serif;
+  font-family: $Poppins;
 }

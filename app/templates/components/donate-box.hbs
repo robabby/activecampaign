@@ -7,17 +7,24 @@
     </div>
   </div>
   <div class="donate-box__content">
-    <h2 class="donate-box__title">Only four days left to fund this project</h2>
-    <p class="donate-box__text">
-      Join the <span class="donate-box__total-donors">{{totalDonors}}</span> other donors who have already supported this project.
-    </p>
+    {{#if isComplete}}
+      <h2 class="donate-box__title">Congratulations!</h2>
+      <p class="donate-box__text">
+        <span class="donate-box__total-donors">{{totalDonors}}</span> donors contributed to the funding of this project.
+      </p>
+    {{else}}
+      <h2 class="donate-box__title">Only four days left to fund this project</h2>
+      <p class="donate-box__text">
+        Join the <span class="donate-box__total-donors">{{totalDonors}}</span> other donors who have already supported this project.
+      </p>
+    {{/if}}
     <div class="donate-box__form">
       <div class="donate-box__donation-amount">
         <span class="donate-box__input-mask">$</span>
         {{input
           class="donate-box__input"
           placehoder="0"
-          enter="addDonation"
+          enter="newDonation"
           value=donation
           onChange=(action (mut donation))
         }}
@@ -25,7 +32,7 @@
       <button
         type="submit"
         class="donate-box__submit"
-        {{action "addDonation" donation}}
+        {{action "newDonation" donation}}
         disabled={{isComplete}}
       >
         {{buttonText}}

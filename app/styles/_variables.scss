@@ -1,12 +1,22 @@
+// Fonts
+$Poppins: 'Poppins', sans-serif;
+$IBMPlexSans: 'IBM Plex Sans', sans-serif;
+
 // Colors
 $primaryGreen: #19CCA3;
 $primaryBlue: #E3EBFC;
-
+$textColorBlue: #356AE6;
+$textColorRed: #FF8A8A;
 $backgroundColor: #FAFBFF;
+
+// Variables & Tokens
 $tooltipBackgroundColor: $primaryBlue;
+$tooltipTextColor: $textColorBlue;
 $progressBackgroundColor: #B6F2E4;
 $progressBarColor: $primaryGreen;
 $bodyTextColor: #4E5468;
 $formSubmitBackgroundColor: $primaryGreen;
+$formButtonHover: darken($formSubmitBackgroundColor, 2%);
+$formButtonActive: darken($formSubmitBackgroundColor, 5%);
 $formMaskColor: #9298AD;
 $isCompleteBlue: darken($primaryBlue, 25%);

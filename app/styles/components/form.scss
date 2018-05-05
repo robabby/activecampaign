@@ -13,7 +13,7 @@
   width: 100%;
   padding:.5rem .5rem .35rem 2rem;
   border:1px solid #CED3E0;
-  font-family: 'Poppins', sans-serif;
+  font-family: $Poppins;
   font-size: 24px;
   border-radius: 5px 0 0 5px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15);
@@ -22,7 +22,7 @@
   position: absolute;
   top: .55rem;
   left: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: $Poppins;
   font-size: 24px;
   color:$formMaskColor;
   z-index: 1;
@@ -32,7 +32,7 @@
   border: 0;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: $Poppins;
   font-weight: bold;
   font-size: 1.125rem;
   color: #fff;
@@ -40,12 +40,20 @@
 
   &:hover {
     cursor: pointer;
-    background-color: darken($formSubmitBackgroundColor, 2%)
+    background-color: $formButtonHover;
   }
   &:active {
-    background-color: darken($formSubmitBackgroundColor, 5%)
+    background-color: $formButtonActive;
   }
   &:disabled {
     background-color: $isCompleteBlue;
+
+    &:hover {
+      cursor: not-allowed;
+    }
   }
+}
+.donate-box__error-text {
+  margin-top: 5px;
+  color: $textColorRed;
 }
